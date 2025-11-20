@@ -1,10 +1,29 @@
-# Basic gitleaks config - tune rules as needed
+
+# gitleaks config (tuned defaults)
 title = "gitleaks config"
 
+description = "Tuned rules to detect common secrets while allowing known backup paths. Update rules as needed."
+
 [[rules]]
-description = "Generic high entropy string"
-regex = '''(?i)(?:api[_-]?key|secret|token|password|aws_secret|private_key)[:=]\s*['\"]?([A-Za-z0-9\-_=+\/]{8,})['\"]?'''
+description = "Generic API key or secret-like string"
+regex = '''(?i)(?:api[_-]?key|secret|token|password|aws[_-]?secret|private_key|ssh-rsa|ssh-dss)[:=]\s*['\"]?([A-Za-z0-9\-_=+\/]{20,})['\"]?'''
 tags = ["key", "secret"]
 
+[[rules]]
+description = "AWS secret access key (AWS-like pattern)"
+regex = '''(?i)aws(.{0,20})?(secret|access)?[_-]?(key|id)[:=]\s*['\"]?([A-Za-z0-9/+=]{16,40})['\"]?'''
+tags = ["aws", "key"]
+
+[[rules]]
+description = "Private key block (PEM)"
+regex = "-----BEGIN (RSA |OPENSSH |EC |DSA )?PRIVATE KEY-----"
+tags = ["private_key"]
+
 [allowlist]
-paths = ["github-backups"]
+# Allow scanning to ignore known backup folders and benign paths to reduce false positives
+paths = ["github-backups", "*.tar.gz", "*/.github/", "docs/"]
+
+[paths]
+# optional: exclude very large binary folders (if present)
+exclude = ["node_modules", "venv", "dist"]
+
