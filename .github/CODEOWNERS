@@ -1,2 +1,2 @@
-# Replace with your org/team or username handles
-* @REPO_MAINTAINERS
+# CODEOWNERS: default to repo owner; replace with teams or usernames as needed
+* @Koop-Folkes
