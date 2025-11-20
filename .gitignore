@@ -1,0 +1,29 @@
+# Local and system
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+venv/
+.venv/
+env/
+ENV/
+*.env
+
+# Archives and backups
+github-backups*
+*.tar.gz
+*.zip
+
+# Node
+node_modules/
+
+# IDEs
+.vscode/
+.idea/
+
+# Test caches
+.pytest_cache/
