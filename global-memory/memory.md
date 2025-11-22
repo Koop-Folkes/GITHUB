@@ -10,7 +10,7 @@ This file defines global, long-lived organisational truths used by all AI tools.
 
 ## 2. Global Rules (Examples – customise)
 
-- GitHub is the canonical knowledge base; SharePoint is a read-only mirror.
+- Template is the canonical knowledge base; SharePoint is a read-only mirror.
 - No secrets, API keys, tokens, or credentials are ever stored in:
    - Code
    - Prompts

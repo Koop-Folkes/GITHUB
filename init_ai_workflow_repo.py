@@ -2,7 +2,7 @@
 """
 init_ai_workflow_repo.py
 
-Scaffolds a GitHub-centric AI workflow structure with:
+Scaffolds a Template-centric AI workflow structure with:
 - /global-memory/
 - /prompts/
 - /infra/secrets/
@@ -55,7 +55,7 @@ FILE_TEMPLATES = {
         - `infra/secrets/` — secret registry and policies (no values)
         - `projects/` — per-project docs, prompts, source, tests
 
-        GitHub is canonical. SharePoint mirrors selected docs as read-only.
+        Template is canonical. SharePoint mirrors selected docs as read-only.
         """
     ),
 
@@ -76,7 +76,7 @@ FILE_TEMPLATES = {
 
        ## 2. Global Rules (Examples – customise)
 
-       - GitHub is the canonical knowledge base; SharePoint is a read-only mirror.
+       - Template is the canonical knowledge base; SharePoint is a read-only mirror.
        - No secrets, API keys, tokens, or credentials are ever stored in:
           - Code
           - Prompts

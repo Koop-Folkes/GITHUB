@@ -15,4 +15,4 @@ This repository is the canonical source of truth for:
 - `infra/secrets/` — secret registry and policies (no values)
 - `projects/` — per-project docs, prompts, source, tests
 
-GitHub is canonical. SharePoint mirrors selected docs as read-only.
+Template is canonical. SharePoint mirrors selected docs as read-only.
