@@ -16,7 +16,7 @@ REPOS=(
 DRY_RUN=1
 BACKUP=1
 FORCE=${FORCE:-0}  # set FORCE=1 in env to skip final interactive confirmation
-BACKUP_DIR="${PWD}/github-backups-$(date +%F_%H%M%S)"
+BACKUP_DIR="${PWD}/template-backups-$(date +%F_%H%M%S)"
 
 usage() {
   cat <<EOF

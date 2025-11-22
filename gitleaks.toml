@@ -7,4 +7,4 @@ regex = '''(?i)(?:api[_-]?key|secret|token|password|aws_secret|private_key)[:=]\
 tags = ["key", "secret"]
 
 [allowlist]
-paths = ["github-backups"]
+paths = ["template-backups"]

@@ -14,7 +14,7 @@ ENV/
 *.env
 
 # Archives and backups
-github-backups*
+template-backups*
 *.tar.gz
 *.zip
 
